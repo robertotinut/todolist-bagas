@@ -19,14 +19,20 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // 1. Create Default Users (Owner and Member)
-        $user = User::factory()->create([
+        $user = User::create([
             'name' => 'Admin User (Owner)',
             'email' => 'test@example.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            'email_verified_at' => now(),
+            'remember_token' => \Illuminate\Support\Str::random(10),
         ]);
 
-        $member = User::factory()->create([
+        $member = User::create([
             'name' => 'Regular Member',
             'email' => 'member@example.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('password'),
+            'email_verified_at' => now(),
+            'remember_token' => \Illuminate\Support\Str::random(10),
         ]);
 
         // 2. Create Workspace for User
