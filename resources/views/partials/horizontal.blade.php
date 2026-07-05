@@ -3,10 +3,10 @@
     <div class="pe-app-sidebar-logo px-6 d-flex align-items-center position-relative">
         <!--begin::Brand Image-->
         <a href="index" class="fs-18 fw-semibold">
-            <img height="30" class="pe-app-sidebar-logo-default d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-dark-2.png') }}">
-            <img height="30" class="pe-app-sidebar-logo-light d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-light-2.png') }}">
-            <img height="30" class="pe-app-sidebar-logo-minimize d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-md-2.png') }}">
-            <img height="30" class="pe-app-sidebar-logo-minimize-light d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-md-light-2.png') }}">
+            <img height="42" class="pe-app-sidebar-logo-default d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-dark-2.png') }}">
+            <img height="42" class="pe-app-sidebar-logo-light d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-light-2.png') }}">
+            <img height="42" class="pe-app-sidebar-logo-minimize d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-md-2.png') }}">
+            <img height="42" class="pe-app-sidebar-logo-minimize-light d-none" alt="Logo" src="{{ asset('assets/' . 'images/logo-md-light-2.png') }}">
             <!-- FabKin -->
         </a>
         <!--end::Brand Image-->

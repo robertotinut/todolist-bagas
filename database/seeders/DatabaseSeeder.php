@@ -89,7 +89,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Website Company',
             'description' => 'Project to build company profile website.',
             'created_by' => $user->id,
-            'is_default' => true,
+            'is_default' => false,
         ]);
 
         $sladaSaas = Project::create([
@@ -97,7 +97,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'SLADA SaaS',
             'description' => 'Developing the SLADA productivity platform.',
             'created_by' => $user->id,
-            'is_default' => true,
+            'is_default' => false,
         ]);
 
         // 6. Create Tasks

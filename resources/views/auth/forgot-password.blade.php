@@ -13,7 +13,7 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card mx-xxl-8">
                         <div class="card-body py-12 px-8">
-                            <img src="{{ asset('assets/' . 'images/logo-dark-2.png') }}" alt="Logo Dark" height="30"
+                            <img src="{{ asset('assets/' . 'images/logo-dark-2.png') }}" alt="Logo Dark" height="42"
                                 class="mb-4 mx-auto d-block">
                             <h6 class="mb-2 fw-medium text-center">Lupa Password?</h6>
                             <p class="text-muted text-center fs-13 mb-6">Masukkan alamat email yang terdaftar. Kami akan mengirimkan link untuk mereset kata sandi Anda.</p>
