@@ -1,6 +1,6 @@
 @extends('partials.layouts.master_auth')
 
-@section('title', 'Sign Up | SLADA')
+@section('title', 'Sign Up | SLADA - Aplikasi Manajemen Tugas')
 
 @section('content')
 

@@ -1,6 +1,6 @@
 @extends('partials.layouts.master_auth')
 
-@section('title', 'Sign In| FabKin Admin & Dashboards Template')
+@section('title', 'Sign In | SLADA - Aplikasi Manajemen Tugas')
 
 @section('content')
 
