@@ -1,6 +1,6 @@
 @extends('partials.layouts.master_auth')
 
-@section('title', 'Sign In| FabKin Admin & Dashboards Template')
+@section('title', 'Sign Up | SLADA')
 
 @section('content')
 
@@ -16,7 +16,7 @@
                         <div class="card-body py-12 px-8">
                             <img src="{{ asset('assets/' . 'images/logo-dark-2.png') }}" alt="Logo Dark" height="42"
                                 class="mb-4 mx-auto d-block">
-                            <h6 class="mb-3 mb-8 fw-medium text-center">Sign In to SLADA</h6>
+                            <h6 class="mb-3 mb-8 fw-medium text-center">Buat Akun Baru SLADA</h6>
                             
                             @if ($errors->any())
                                 <div class="alert alert-danger mb-4">
@@ -28,45 +28,42 @@
                                 </div>
                             @endif
 
-                            <form method="POST" action="{{ route('login') }}">
+                            <form method="POST" action="{{ route('register') }}">
                                 @csrf
                                 <div class="row g-4">
+                                    <div class="col-12">
+                                        <label for="name" class="form-label">Nama Lengkap <span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            value="{{ old('name') }}" placeholder="Masukkan nama lengkap Anda" required autofocus>
+                                    </div>
                                     <div class="col-12">
                                         <label for="email" class="form-label">Email <span
                                                 class="text-danger">*</span></label>
                                         <input type="email" class="form-control" id="email" name="email"
-                                            value="{{ old('email') }}" placeholder="Enter your email" required autofocus>
+                                            value="{{ old('email') }}" placeholder="Masukkan email Anda" required>
                                     </div>
                                     <div class="col-12">
                                         <label for="password" class="form-label">Password <span
                                                 class="text-danger">*</span></label>
                                         <input type="password" class="form-control" id="password" name="password"
-                                            placeholder="Enter your password" required>
+                                            placeholder="Buat password baru" required>
                                     </div>
                                     <div class="col-12">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="rememberMe" name="remember">
-                                                <label class="form-check-label" for="rememberMe">Remember me</label>
-                                            </div>
-                                            <div class="form-text">
-                                                <a href="{{ route('password.request') }}"
-                                                    class="link link-primary text-muted text-decoration-underline">Forgot
-                                                    password?</a>
-                                            </div>
-                                        </div>
+                                        <label for="password_confirmation" class="form-label">Konfirmasi Password <span
+                                                class="text-danger">*</span></label>
+                                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation"
+                                            placeholder="Ulangi password baru" required>
                                     </div>
                                     <div class="col-12 mt-8">
-                                        <button type="submit" class="btn btn-primary w-full mb-4">Sign In<i
-                                                class="bi bi-box-arrow-in-right ms-1 fs-16"></i></button>
+                                        <button type="submit" class="btn btn-primary w-full mb-4">Daftar Akun <i
+                                                class="bi bi-person-plus ms-1 fs-16"></i></button>
                                     </div>
                                 </div>
-                                <p class="mb-0 fw-semibold position-relative text-center fs-12 text-muted">Belum punya akun? <a
-                                        href="{{ route('register') }}" class="text-decoration-underline text-primary">Daftar disini</a>
+                                <p class="mb-0 fw-semibold position-relative text-center fs-12 text-muted">
+                                    Sudah punya akun? <a href="{{ route('login') }}" class="text-decoration-underline text-primary">Login disini</a>
                                 </p>
                             </form>
-                            <div class="text-center">
-                            </div>
                         </div>
                     </div>
                     <p class="position-relative text-center fs-12 mb-0">© 2025 Fabkin. Crafted with ❤️ by Pixeleyez</p>
@@ -74,7 +71,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-@section('js')
 @endsection
